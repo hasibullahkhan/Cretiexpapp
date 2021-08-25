@@ -1,0 +1,13 @@
+.cardc{
+    margin: 50, auto;
+    padding: 0;
+    margin-top: 0;
+    background: linear-gradient(to bottom, skyblue, pink);
+    width: 250px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 15px;
+}
