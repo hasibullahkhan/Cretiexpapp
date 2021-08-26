@@ -9,7 +9,7 @@ const Menu = () => {
         <li> <Link to="Certificate">Certificate</Link> </li>
         <li><Link to="ItemMaster">Item Master</Link></li>
         <li><Link to="VenderMaster">Vender Master</Link></li>
-        <li><Link to="ItemMaster">user Alocation</Link></li>
+        <li><Link to="TaskList">Task</Link></li>
       </ul>
     </div>
   )

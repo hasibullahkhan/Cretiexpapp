@@ -1,8 +1,9 @@
 import React from 'react'
 import CertificateEntry from "./Component/CardCertificate/Certificate"
 import ItemMasterEntry from "./Component/CardCertificate/ItemMaster"
+import TaskList from './Component/taskList'
 import Menu from "./Component/Menu"
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path="/Certificate" exact component={Certificate} />
           <Route path="/ItemMaster" component={ItemMaster} />
           <Route path="/VenderMaster" component={VenderMaster} />
+          <Route path="/TaskList" component={TaskList} />
         </Switch>
       </div>
     </Router>
