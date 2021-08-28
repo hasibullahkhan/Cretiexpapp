@@ -1,14 +1,26 @@
 import React from 'react';
-
+import axios from 'axios';
 class TaskList extends React.Component {
     state = {
         task: ""
     }
+
     onDeleteClick = () => {
         
         console.log("inside delete")
     }
+
+    onSubmitClick = () => {
+        console.log("inside on submit")
+        // axios.post('http://localhost:4000/addTask', {
+        //     task: this.state.task
+            
+        // })
+       console.log(this.state.task)
+    }
+    
     render() {
+        console.log(this.state.task)
         return (
             <div>
                 <div><h3>TaskList</h3></div>
@@ -29,7 +41,7 @@ class TaskList extends React.Component {
                             <div className="ui two buttons">
                             <div className="ui basic green button">Done</div>
                             <div className="ui basic red button" onClick={
-                                        ()=>this.onDeleteClick()
+                                        () => this.onDeleteClick()
                                         }>Delete</div>
                         </div>
                         </div> 

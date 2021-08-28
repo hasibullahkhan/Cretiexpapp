@@ -1,16 +1,17 @@
 const express = require('express');
-
 const cors = require('cors');
-
+const bodyParser = require('body-parser');
 const app = express();
 
 app.use(cors());
-
+app.use(bodyParser.json)
 app.get('/tasks', (req, res) => {
-    res.send('list of all teask')
+    res.send('list of all task')
 })
 
-app.get('/addTask', (req, res) => {
+app.post('/addTask', (req, res) => {
+
+    console.log(res)
     res.send('you can add Tasks')
 })
 

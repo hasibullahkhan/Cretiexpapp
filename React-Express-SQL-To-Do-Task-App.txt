@@ -1,0 +1,262 @@
+
+
+
+React + Express + SQL (To-Do Task App) #part1
+https://www.youtube.com/watch?v=npaLIQeH7xw
+
+https://cdnjs.com/libraries/semantic-ui
+
+go stylesheet copy below url and past in index.html
+
+
+
+https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css
+
+
+
+Server setup using Express.js #part2 || React + Express + SQL (To-Do Task App)
+https://www.youtube.com/watch?v=V6H-ZLaFmKY
+
+for server folder
+npm init
+
+npm install express cors
+
+npm install body-parser        
+
+insert this line in packagejson of server file 
+"start": "node server.js"
+
+if want to server every time itself to npm install nodemon
+
+
+now my server keep on port 4000
+
+3 rouwts
+1. display all task user submited on day
+2. post request andding new task
+3. deleted my task
+
+to run server command npm start
+http://localhost:4000/TaskList
+
+
+
+https://www.youtube.com/watch?v=hzAglgAT89k
+Connecting React with SQL (Writing SQL queries and making API calls) #Part 4
+npm install axios
+
+
+------------------------------
+
+https://www.youtube.com/watch?v=qXvFaEkkZH8
+How to Make REST API Calls in React - GET, POST, PUT, DELETE - Step by Step
+
+nmp install asious --save
+
+----------------------------- not good 
+
+
+
+Step by Step Create Node.js REST API with SQL Server Database
+https://www.youtube.com/watch?v=Uvy_BlgwfLI
+
+node -v 
+
+Node.js -  https://nodejs.org/en/download/
+Postman - https://www.postman.com/downloads/
+
+VS Code - https://code.visualstudio.com/
+
+https://www.microsoft.com/en-us/sql-server/sql-server-downloads
+
+
+Install SQL Server 2019 Step by Step | Developer Edition | Free Software | Install SSMS
+https://www.youtube.com/watch?v=7GVFYt6_ZFM
+
+
+https://www.youtube.com/watch?v=MLcXfRH1YzE
+How to connect to Microsoft SQL Server database using NodeJs
+steps for above vidio
+https://www.npmjs.com/package/mssql
+
+services.msc
+
+SQL Server VSS Writer ignore
+SQL Server (MSSQLSERVER) that is mine INSTANSE NAME : MSSQLSERVER
+vidio name : SQL Server (SQL2K14) 
+
+INSTANSE NAME :(SQL2K14)
+
+CONFIGRATION MANAGER 
+-------------------------
+
+https://www.youtube.com/watch?v=Uvy_BlgwfLI
+Step by Step Create Node.js REST API with SQL Server Database
+
+------------------------
+
+compmgmt.msc
+click on services and applications
+click on sql server configration 
+click SQL Server Network configration
+click on protocols for SQLEXPRESS
+check TCP/IP Enable Properties 
+ip addresses 
+tcp port to create configration and connection string nodejs to 
+connect sequl server 
+ 
+ .1 npm init -y
+
+create packagejason file 
+
+.2 code . 
+
+3. COPY below dependances in packagejason
+ "dependencies": {
+    "body-parser": "~1.0.1",
+    "cors": "2.8.1",
+    "express": "~4.0.0",
+    "mssql": "^6.2.1"
+  },
+
+"devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+type in script area  "start" :"nodemon api.js"
+
+4. type  npm install
+
+
+
+node model will be install use above command
+5. now create dbconfig.js file node js to connect sqlserver
+
+const config = {
+    user :'foo',
+    password :'foo',
+    server:'127.0.0.1',
+    database:'Products',
+    options:{
+        trustedconnection: true,
+        enableArithAbort : true, 
+        instancename :'SQLEXPRESS'
+    },
+    port : 55892
+}
+
+6. create class to represent the table  
+nodejs 
+EmployeeDB
+module.exports = config;  
+
+https://github.com/debugmodedotnet/sqlservernodejsrestapi
+
+----------------------------------------
+
+dboperations.js
+
+https://www.youtube.com/watch?v=gpfP60KjmZU
+Learn React JS and .NET Core API by Creating a Full Stack Web App from Scratch
+
+https://www.microsoft.com/en-pk/download/details.aspx?id=42299
+
+
+1. Create Table 
+Create Database EmployeeDB
+2 Create Department Table 
+
+create table dbo.Department(
+DepartmentId int identity(1,1),
+DepartmentName varchar(500)
+)
+
+select *from dbo.Department
+
+insert into dbo.Department values
+('IT')
+TCP Dynamic Ports
+
+create table dbo.Employee(
+EmployeeId int identity(1,1),
+EmployeeName varchar(500),
+Department varchar(500),
+DateOfJoining Date,
+PhotoFileName varchar(500)
+
+)
+
+
+insert into dbo.Employee values 
+('Khan','IT','2021-08-15','anonymous.png') 
+
+------------------------------------
+
+How to Create File Tables in SQL Server
+
+
+1. npm create-react-app my-app
+
+2. npm install react-bootstrap bootstrap
+3. paset styleSheet in index html line no. 29
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+  integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+  crossorigin="anonymous"
+/>
+
+create .env
+add in gitignore 
+https://www.youtube.com/watch?v=Kw1XAbrOv34
+how to use SQL SERVER 
+
+
+
+
+local_tcp_port
+
+SELECT local_tcp_port
+FROM sys.dm_exec_connections
+WHERE session_id = @@SPID;
+
+out put : local_tcp_port = null
+------------------------- 
+
+SELECT  
+    local_tcp_port,session_id,connect_time,net_transport ,num_reads ,num_writes,client_net_address ,
+	(select text from sys.dm_exec_sql_text(mot_recent_sql_handle)) as Query
+FROM sys.dm_exec_connections 
+order by connect_time  desc
+
+
+out out :
+
+local_tcp_port   session_id    connect_time             net_transport  num_reads    num_writes  client_net_address
+NULL	           51	       2021-08-28 07:40:04.880	Shared memory	10       	9	<local machine>
+
+
+
+SELECT  
+    local_tcp_port,session_id,connect_time,net_transport ,num_reads ,num_writes,client_net_address ,
+	(select text from sys.dm_exec_sql_text(most_recent_sql_handle)) as Query
+FROM sys.dm_exec_connections 
+order by connect_time  desc
+
+
+---------------------------
+
+api using nodejs + sql server
+https://www.youtube.com/watch?v=9JrnEO3W2Ys
+
+steps for above vidio
+
+1. make folder apinodejs
+2. npx express generator
+command not work 
+
+
+
+
+
