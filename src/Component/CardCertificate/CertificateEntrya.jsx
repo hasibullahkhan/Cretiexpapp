@@ -4,6 +4,7 @@ import TextField from '@material-ui/core/TextField';
 import FormControl from '@material-ui/core/FormControl';
 import FormGroup from '@material-ui/core/FormGroup';
 import { Button } from '@material-ui/core'
+import ItemMasterEntry from '../CardCertificate/Certificate'
 
 
 
@@ -23,8 +24,11 @@ export class CertificateEntrya extends Component {
     });
   }
 
-  onSubmitForm() {
-    console.log(this.state)
+    onSubmitForm() {
+       console.log(this.state);
+       // savData();
+        //https://dev.to/rock007/using-react-javascript-form-onsubmit-calling-api-not-working-properly-5419
+        
   }
 
             
@@ -79,3 +83,19 @@ export class CertificateEntrya extends Component {
 }
 
 export default CertificateEntrya
+function savData() {
+    console.log(this.state);
+    return (
+        <div>
+        <h1>Data save</h1>
+            ItemMaster()
+        </div>
+    )
+}
+
+
+function ItemMaster() {
+  return (
+    <ItemMasterEntry head1="Item Master Entry" lbl1="Item# " lbl2="Name#" lbl3="Description#" />
+  )
+}
