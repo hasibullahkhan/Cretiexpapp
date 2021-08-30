@@ -6,7 +6,7 @@ import TextField from '@material-ui/core/TextField';
 // import KeyboardDatePickerExample from "./Dateinput1"
 import Dateinput1 from "../CardCertificate/Dateinput1"
 import { makeStyles } from '@material-ui/core/styles';
-import {Button} from '@material-ui/core'
+import { Button } from '@material-ui/core'
 import "../CardCertificate/Certificate.css"
 
 const useStyles = makeStyles((theme) => ({
@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-const CertificateEntry = ({ head1, lbl1, lbl2, lbl3,lbl4,lbl5,lbl6}) => {
+const CertificateEntry = ({ head1, lbl1, lbl2, lbl3, lbl4, lbl5, lbl6 }) => {
     const classes = useStyles();
     return (
         <div className="cardc">
@@ -32,35 +32,35 @@ const CertificateEntry = ({ head1, lbl1, lbl2, lbl3,lbl4,lbl5,lbl6}) => {
                     <TextField id="outlined-basic" label={lbl1} variant="outlined" />
                     <TextField id="outlined-basic" label={lbl2} variant="outlined" />
                     <TextField id="outlined-basic" label={lbl3} variant="outlined" />
-                    <TextField  id="outlined-basic" label={lbl4} variant="outlined" />
-                    <TextField  id="outlined-basic" label={lbl5} variant="outlined" />
-                    <TextField  id="outlined-basic" label={lbl6} variant="outlined" />
-                    
+                    <TextField id="outlined-basic" label={lbl4} variant="outlined" />
+                    <TextField id="outlined-basic" label={lbl5} variant="outlined" />
+                    <TextField id="outlined-basic" label={lbl6} variant="outlined" />
+
                     <TextField
-            id="sdate"
-            label="Stat Date"
-            type="date"
-            defaultValue="2021-08-25"
-            className={classes.textField}
-            InputLabelProps={{
-                shrink: true,
-            }}
-        />
-        <TextField
-            id="edate"
-            label="End Date"
-            type="date"
-            defaultValue="2021-08-25"
-            className={classes.textField}
-            InputLabelProps={{
-                shrink: true,
-            }}
-        />
-            <Button variant="contained" color="primary">
-             Save
-                </Button>       
-                    
-                        
+                        id="sdate"
+                        label="Stat Date"
+                        type="date"
+                        defaultValue="2021-08-25"
+                        className={classes.textField}
+                        InputLabelProps={{
+                            shrink: true,
+                        }}
+                    />
+                    <TextField
+                        id="edate"
+                        label="End Date"
+                        type="date"
+                        defaultValue="2021-08-25"
+                        className={classes.textField}
+                        InputLabelProps={{
+                            shrink: true,
+                        }}
+                    />
+                    <Button variant="contained" color="primary">
+                        Save
+                    </Button>
+
+
                 </FormControl>
             </FormGroup>
 
@@ -72,4 +72,3 @@ const CertificateEntry = ({ head1, lbl1, lbl2, lbl3,lbl4,lbl5,lbl6}) => {
 }
 
 export default CertificateEntry;
-

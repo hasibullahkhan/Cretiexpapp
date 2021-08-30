@@ -1,5 +1,6 @@
 import React from 'react';
 import CertificateEntry from "./Component/CardCertificate/Certificate";
+import CertificateEntrya from "./Component/CardCertificate/CertificateEntrya";
 import ItemMasterEntry from "./Component/CardCertificate/ItemMaster";
 import TaskList from './Component/taskList';
 import Menu from "./Component/Menu";
@@ -16,6 +17,7 @@ function App() {
         <Menu />
         <Switch>
           <Route path="/Certificate" exact component={Certificate} />
+          <Route path="/CertificateEntry" exact component={CertificateEntrya} />
           <Route path="/ItemMaster" component={ItemMaster} />
           <Route path="/VenderMaster" component={VenderMaster} />
           <Route path="/TaskList" component={TaskList} />

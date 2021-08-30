@@ -7,6 +7,7 @@ const Menu = () => {
     <div className="Menustyle">
       <ul>
         <li> <Link to="Certificate">Certificate</Link> </li>
+        <li> <Link to="CertificateEntry">Certificate Entry</Link> </li>
         <li><Link to="ItemMaster">Item Master</Link></li>
         <li><Link to="VenderMaster">Vender Master</Link></li>
         <li><Link to="TaskList">Task</Link></li>
