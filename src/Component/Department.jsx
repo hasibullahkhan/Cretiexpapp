@@ -9,12 +9,14 @@ export default class Department extends Component {
 
     }
     refreshList() {
-        fetch(process.env.REACT_APP_API + 'department')
+        fetch(process.env.REACT_APP_API + 'Emplayee')
             .then(response => response.json())
             .then(data => {
                 this.setState({ deps: data });
-
+// console.log(deps);
             })
+        
+       
     }
 
     componentDidMount() {
@@ -40,9 +42,9 @@ export default class Department extends Component {
                     </thead>
                     <tbody>
                         {deps.map(dep =>
-                            <tr key={dep.DepartmentId}>
-                                <td>{dep.DepartmentId}</td>
-                                <td>{dep.DepartmentName}</td>
+                            <tr key={dep.EmployeeId}>
+                                <td>{dep.EmployeeId}</td>
+                                <td>{dep.EmployeeName}</td>
                                 <td>Edit / Delete</td>
                             </tr>
                             )}

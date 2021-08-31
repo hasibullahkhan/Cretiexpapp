@@ -1,4 +1,8 @@
 
+env file contain 
+REACT_APP_API=http://localhost:53535/api/
+REACT_APP_PHOTOPATH=http://localhost:53535/photos/
+
 
 
 React + Express + SQL (To-Do Task App) #part1
