@@ -3,9 +3,8 @@ import "./CertficateEntryStyle.css"
 import TextField from '@material-ui/core/TextField';
 import FormControl from '@material-ui/core/FormControl';
 import FormGroup from '@material-ui/core/FormGroup';
-import { Button } from '@material-ui/core'
+import { Button, ServerStyleSheets } from '@material-ui/core'
 import ItemMasterEntry from '../CardCertificate/Certificate'
-
 
 
 export class CertificateEntrya extends Component {
@@ -28,7 +27,9 @@ export class CertificateEntrya extends Component {
        console.log(this.state);
        // savData();
         //https://dev.to/rock007/using-react-javascript-form-onsubmit-calling-api-not-working-properly-5419
-        
+          // connect to your database
+
+       
   }
 
             
